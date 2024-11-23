@@ -26,7 +26,7 @@ CREATE TABLE posts (
 ```sql
 DO $$
 BEGIN
-    FOR i IN 1..100 LOOP
+    FOR i IN 1..15000 LOOP
         INSERT INTO posts (user_id, content, created_at, likes, comments, shares)
         VALUES (
             (1 + (random() * 10)::INT), -- Random user_id between 1 and 10
